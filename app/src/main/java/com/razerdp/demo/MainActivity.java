@@ -59,20 +59,20 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * not done below!
                  */
-                .addData(new SimplePieInfo(20, getColor("FF446767"))
-                        .setLabel(resourceToBitmap(R.mipmap.ic_test_1)), false)
+                .addData(new SimplePieInfo(8, getColor("FF446767"),"哈哈哈哈")
+                        .setLabel(resourceToBitmap(R.mipmap.ic_test_1)).setTypeFace(Typeface.DEFAULT_BOLD), true)
 
-                .addData(new SimplePieInfo(20, getColor("FFFFD28C"), "长文字test")
+                .addData(new SimplePieInfo(9, getColor("FFFFD28C"), "长文字test")
                         .setLabel(resourceToBitmap(R.mipmap.ic_test_4))
                         .setTypeFace(Typeface.DEFAULT_BOLD), false)
 
-                .addData(new SimplePieInfo(20, getColor("ff2bbc80"))
+                .addData(new SimplePieInfo(43, getColor("ff2bbc80"))
                         .setLabel(resourceToBitmap(R.mipmap.ic_test_5)), true)
 
                 .addData(new SimplePieInfo(30, getColor("ff8be8ff")), true)
                 .addData(new SimplePieInfo(10, getColor("fffa734d")), true)
                 //不能为负数
-                .addData(new SimplePieInfo(0, getColor("ff957de0")).setTypeFace(Typeface.DEFAULT_BOLD), true)
+             //   .addData(new SimplePieInfo(0, getColor("ff957de0")).setTypeFace(Typeface.DEFAULT_BOLD), true)
                 .animatePie(true)
                 .drawText(true)
                 .canTouch(true)

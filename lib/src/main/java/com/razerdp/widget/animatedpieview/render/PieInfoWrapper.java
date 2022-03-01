@@ -221,7 +221,7 @@ final class PieInfoWrapper implements Serializable {
         toAngle = fromAngle + sweepAngle;
         if (autoDesc) {
             //自动填充描述auto
-            desc = String.format(config.getAutoDescStringFormat(), AnimatedPieViewConfig.sFormateRate
+            desc = mPieInfo.getDesc() +"   " + String.format(config.getAutoDescStringFormat(), AnimatedPieViewConfig.sFormateRate
                     .format((mPieInfo.getValue() / sum) * 100));
             if (mPieInfo instanceof SimplePieInfo) {
                 ((SimplePieInfo) mPieInfo).setDesc(desc);
@@ -229,7 +229,7 @@ final class PieInfoWrapper implements Serializable {
         } else {
             desc = mPieInfo.getDesc();
         }
-        PLog.d("【calculate】 " + "{ \n" + "id = " + id + "\nfromAngle = " + fromAngle + "\nsweepAngle = " + sweepAngle + "\ntoAngle = " + toAngle + "\n desc = " + desc + "\n  }");
+        PLog.d("【calculate】 " + "{  \n"+ "id = " + id + "\nfromAngle = " + fromAngle + "\nsweepAngle = " + sweepAngle + "\ntoAngle = " + toAngle + "\n desc = " + desc + "\n  }");
         return toAngle;
     }
 
