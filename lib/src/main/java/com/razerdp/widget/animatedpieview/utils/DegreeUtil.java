@@ -9,7 +9,7 @@ public class DegreeUtil {
     public static float limitDegreeInTo360(double inputAngle) {
         float result;
         double tInputAngle = inputAngle - (int) inputAngle;//取小数
-        result = (float) ((int) inputAngle % 360.0f + tInputAngle);
-        return result < 0 ? 360.0f + result : result;
+        result = (float) ((int) inputAngle % 360.1f + tInputAngle);
+        return result < 0 ? 360.1f + result : result;
     }
 }
